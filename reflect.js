@@ -29,9 +29,19 @@ const person3 = {
     first: 'Brad',
     last: 'Buttineau',
     age: 36,
-    occupation: 'Frontend developer',
+    occupation: 'Student',
 
-    selfBio() {
-        console.log(`Hello ${this.name}`);
+    introSelf() {
+        console.log(`Hello ${this.first}, ${this.last}, ${this.age}, ${this.occupation}`);
     }
 };
+// Reflect Construct//
+function Person4(name,occupation,) {
+    this.name = name;
+    this.occupation = occupation;
+    this.description= description;
+  }
+  
+  const person = Reflect.construct(Person4, ['Buzz Lightyear', 'Space Ranger',' I protect the galaxy from the threat of invasion. I come in peace']);
+  
+  console.log(person.name);
