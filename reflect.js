@@ -36,12 +36,12 @@ const person3 = {
     }
 };
 // Reflect Construct//
-function Person4(name,occupation,) {
+function Person4(name, occupation, quote) {
     this.name = name;
     this.occupation = occupation;
-    this.description= description;
-  }
-  
-  const person = Reflect.construct(Person4, ['Buzz Lightyear', 'Space Ranger',' I protect the galaxy from the threat of invasion. I come in peace']);
-  
-  console.log(person.name);
+    this.quote = quote;
+}
+
+const personName = Reflect.construct(Person4, ['Buzz Lightyear', 'Space Ranger', ' I protect the galaxy from the threat of invasion. I come in peace']);
+
+console.log(personName.name, personName.occupation, personName.quote);
